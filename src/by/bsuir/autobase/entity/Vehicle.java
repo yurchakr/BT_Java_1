@@ -12,6 +12,18 @@ public abstract class Vehicle implements java.io.Serializable{
     private int year;
     private FuelType fuelType;
 
+    public Vehicle(String make, String model, String colour, double price, double fuelConsumption, int power, int year, FuelType fuelType)
+    {
+        this.make = make;
+        this.model = model;
+        this.colour = colour;
+        this.price = price;
+        this.fuelConsumption = fuelConsumption;
+        this.power = power;
+        this.year = year;
+        this.fuelType = fuelType;
+    }
+
     public String getMake() {
         return make;
     }

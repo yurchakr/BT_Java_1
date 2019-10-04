@@ -2,7 +2,10 @@ package by.bsuir.autobase.entity;
 
 public class Truck extends Vehicle implements java.io.Serializable{
 
-    public Truck() {
+    public Truck(String make, String model, String colour, double price, double fuelConsumption, int power, int year, FuelType fuelType,int capacity, TruckCategory truckCategory) {
+        super(make, model, colour, price, fuelConsumption, power, year, fuelType);
+        this.capacity = capacity;
+        this.truckCategory = truckCategory;
     }
 
     private int capacity;

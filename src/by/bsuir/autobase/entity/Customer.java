@@ -8,8 +8,11 @@ public class Customer extends Human implements java.io.Serializable{
     private String preferredMake;
     private double preferredFuelConsumption;
 
-    public Customer() {
-
+    public Customer(String name, int age, FuelType preferredFuelType, String preferredMake, double preferredFuelConsumption) {
+        super(name, age);
+        this.preferredFuelType = preferredFuelType;
+        this.preferredMake = preferredMake;
+        this.preferredFuelConsumption = preferredFuelConsumption;
     }
 
     public FuelType getPreferredFuelType() {
@@ -39,14 +42,14 @@ public class Customer extends Human implements java.io.Serializable{
     public void buyVehicle(List<Vehicle> vehicleList)
     {
         //Work with Console Input. Read data about buying vehicle
-        Car car = new Car();
+        /*Car car = new Car();
         car.setMake("Ford");
         for (Vehicle vehicle: vehicleList) {
             if (car.getMake().equals(vehicle.getMake()))
             {
                 vehicleList.remove(car);
             }
-        }
+        }*/
     }
 
 }
