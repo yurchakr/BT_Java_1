@@ -1,6 +1,5 @@
-package by.bsuir.AutoBase.entity;
+package by.bsuir.autobase.entity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Manager extends Human implements java.io.Serializable{
@@ -8,17 +7,17 @@ public class Manager extends Human implements java.io.Serializable{
     public Manager() {
 
     }
-    private double Salary;
+    private double salary;
 
     public double getSalary() {
-        return Salary;
+        return salary;
     }
 
     public void setSalary(double salary) {
-        Salary = salary;
+        this.salary = salary;
     }
 
-    public void AddForSale(List<Vehicle> vehicleList)
+    public void addForSale(List<Vehicle> vehicleList)
     {
         //Work with Console Input. Read data about adding vehicle
         Car car = new Car();
@@ -26,7 +25,7 @@ public class Manager extends Human implements java.io.Serializable{
         vehicleList.add(car);
     }
     
-    public void RemoveFromSale(List<Vehicle> vehicleList)
+    public void removeFromSale(List<Vehicle> vehicleList)
     {
         //Work with Console Input. Read data about deleting vehicle
         Car car = new Car();
@@ -39,7 +38,7 @@ public class Manager extends Human implements java.io.Serializable{
         }
     }
     
-    public void EditVehicleInfo(List<Vehicle> vehicleList)
+    public void editVehicleInfo(List<Vehicle> vehicleList)
     {
         //Work with Console Input. Read data about editing vehicle
         Car car = new Car();

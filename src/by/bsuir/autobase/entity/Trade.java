@@ -1,4 +1,4 @@
-package by.bsuir.AutoBase.entity;
+package by.bsuir.autobase.entity;
 
 import java.util.Date;
 

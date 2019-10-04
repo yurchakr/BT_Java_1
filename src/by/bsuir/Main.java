@@ -1,6 +1,6 @@
 package by.bsuir;
 
-import by.bsuir.AutoBase.entity.*;
+import by.bsuir.autobase.entity.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -19,11 +19,11 @@ public class Main {
 
 	Car car1 = new Car();
 	car1.setSeatCount(7);
-	car1.setBodyType(BodyType.Saloon);
+	car1.setBodyType(BodyType.SALOON);
 	car1.setDoorCount(5);
 	car1.setColour("blue");
 	car1.setFuelConsumption(7.8);
-	car1.setFuelType(FuelType.Diesel);
+	car1.setFuelType(FuelType.DIESEL);
     car1.setModel("Pajero");
     car1.setMake("Mitsubishi");
     car1.setYear(2007);

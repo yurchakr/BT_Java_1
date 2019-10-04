@@ -1,4 +1,4 @@
-package by.bsuir.AutoBase.entity;
+package by.bsuir.autobase.entity;
 
 public class Truck extends Vehicle implements java.io.Serializable{
 

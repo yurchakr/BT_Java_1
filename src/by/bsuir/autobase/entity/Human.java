@@ -1,4 +1,4 @@
-package by.bsuir.AutoBase.entity;
+package by.bsuir.autobase.entity;
 
 public abstract class Human implements java.io.Serializable {
 
