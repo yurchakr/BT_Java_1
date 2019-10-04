@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
 	AutoBase autobase = new AutoBase();
 
 	/*
@@ -29,7 +29,7 @@ public class Main {
     car1.setYear(2007);
     car1.setPower(304);
     car1.setPrice(7800);
-    List<Vehicle> vehList = new ArrayList<Vehicle>();
+    List<Vehicle> vehList = new ArrayList<>();
     vehList.add(car1);
     autobase.setCarList(vehList);
     autobase.setMoney(1000);
@@ -37,27 +37,21 @@ public class Main {
     int doors = car2.getDoorCount();
     System.out.println(doors);
 
-    SaveAutoBase(autobase);
-    AutoBase autoBase2 = LoadAutoBase();
-    double money = autoBase2.getMoney();
-    System.out.println(money);
+    saveAutoBase(autobase);
+    AutoBase autoBase2 = loadAutoBase();
 
     }
 
-    private static AutoBase LoadAutoBase()
+    private static AutoBase loadAutoBase()
     {
-        try
+        try(
+                // Reading the object from a file
+                FileInputStream file = new FileInputStream("AutoBase.ser");
+                ObjectInputStream in = new ObjectInputStream(file);
+                )
         {
-            // Reading the object from a file
-            FileInputStream file = new FileInputStream("AutoBase.ser");
-            ObjectInputStream in = new ObjectInputStream(file);
-
             // Method for deserialization of object
-            AutoBase autoBase = (AutoBase)in.readObject();
-
-            in.close();
-            file.close();
-            return autoBase;
+            return (AutoBase)in.readObject();
         }
 
         catch(IOException | ClassNotFoundException ex)
@@ -68,19 +62,17 @@ public class Main {
 
     }
 
-    private static void SaveAutoBase(AutoBase autoBase)
+    // Method for serialization of object
+    private static void saveAutoBase(AutoBase autoBase)
     {
-        try
+        try(
+                //Saving the object in a file
+                FileOutputStream file = new FileOutputStream("AutoBase.ser");
+                ObjectOutputStream out = new ObjectOutputStream(file);
+                )
         {
-            //Saving of object in a file
-            FileOutputStream file = new FileOutputStream("AutoBase.ser");
-            ObjectOutputStream out = new ObjectOutputStream(file);
-
-            // Method for serialization of object
             out.writeObject(autoBase);
 
-            out.close();
-            file.close();
         }
 
         catch(IOException ex)
