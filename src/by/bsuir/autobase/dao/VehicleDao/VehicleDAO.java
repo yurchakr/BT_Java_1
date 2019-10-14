@@ -1,8 +1,8 @@
-package by.bsuir.DAO.VehicleDAO;
+package by.bsuir.autobase.dao.VehicleDao;
 
-import by.bsuir.AutoBase.AutoBase;
-import by.bsuir.AutoBase.Vehicle;
-import by.bsuir.DAO.DaoFactory;
+import by.bsuir.autobase.entity.AutoBase;
+import by.bsuir.autobase.entity.Vehicle;
+import by.bsuir.autobase.dao.DaoFactory;
 import by.bsuir.Serialize.Serialize;
 
 import java.io.*;

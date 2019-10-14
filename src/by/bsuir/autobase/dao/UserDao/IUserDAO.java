@@ -1,6 +1,6 @@
-package by.bsuir.DAO.UserDAO;
+package by.bsuir.autobase.dao.UserDao;
 
-import by.bsuir.AutoBase.User;
+import by.bsuir.autobase.entity.User;
 
 import java.util.ArrayList;
 

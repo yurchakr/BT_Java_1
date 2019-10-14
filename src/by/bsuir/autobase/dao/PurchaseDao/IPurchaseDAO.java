@@ -1,6 +1,6 @@
 package by.bsuir.autobase.dao.PurchaseDao;
 
-/*import by.bsuir.AutoBase.Purchase;*/
+import by.bsuir.autobase.entity.Purchase;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,7 @@
-package by.bsuir.DAO.VehicleDAO;
+package by.bsuir.autobase.dao.VehicleDao;
 
 import java.util.ArrayList;
-import by.bsuir.AutoBase.Vehicle;
+import by.bsuir.autobase.entity.Vehicle;
 
 /**
  * The interface Vehicle dao.
